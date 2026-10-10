@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+/* ==========================================================================
+   ReHome Design Token System
+   ========================================================================== */
+:root {
+  /* Brand / Primary Palette */
+  --primary: #059669;
+  --primary-hover: #047857;
+  --primary-dark: #065f46;
+  --primary-light: #ecfdf5;
+  --primary-border: #a7f3d0;
+  
+  /* Secondary / Surface Dark */
+  --secondary: #0f172a;
+  --secondary-hover: #1e293b;
+  --secondary-light: #334155;
+  
+  /* Typography Colors */
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
+  
+  /* Backgrounds */
+  --bg-page: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-hover: #f8fafc;
+  
+  /* Borders */
+  --border-color: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --border-focus: #059669;
+  
+  /* Status Colors */
+  --status-available: #059669;
+  --status-reserved: #d97706;
+  --status-given: #64748b;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+  
+  /* Badge Tokens */
+  --badge-free-bg: #ecfdf5;
+  --badge-free-text: #047857;
+  --badge-free-border: #a7f3d0;
+
+  /* Spacing & Rhythm Tokens */
+  --space-3xs: 2px;
+  --space-2xs: 4px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* Typography Scales */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', var(--font-sans);
+  --font-size-xs: 0.75rem;     /* 12px */
+  --font-size-sm: 0.875rem;    /* 14px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lg: 1.125rem;    /* 18px */
+  --font-size-xl: 1.25rem;     /* 20px */
+  --font-size-2xl: 1.5rem;     /* 24px */
+  --font-size-3xl: 1.875rem;   /* 30px */
+  --font-size-4xl: 2.25rem;    /* 36px */
+  --font-size-5xl: 3rem;       /* 48px */
+  
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px 0 rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+  --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 8px -4px rgba(15, 23, 42, 0.04);
+  --shadow-float: 0 20px 35px -5px rgba(15, 23, 42, 0.12);
+
+  /* Accessibility & Focus Tokens */
+  --focus-ring: 2px solid var(--primary);
+  --focus-offset: 2px;
+  --focus-box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.25);
+  --touch-target-min: 44px;
+
+  /* Responsive Containers */
+  --container-max: 1200px;
+  --container-wide: 1440px;
+}
+
+/* ==========================================================================
+   CSS Reset & Base Rules
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  color: var(--text-main);
+  background-color: var(--bg-page);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================================================
+   Accessibility Utilities & Focus Styles
+   ========================================================================== */
+
+/* Universal Keyboard Focus Ring */
+:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+  border-radius: var(--radius-xs);
+}
+
+/* Screen Reader Only Utility */
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Skip Navigation Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 16px;
+  background: var(--primary);
+  color: var(--text-inverse);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  font-weight: 600;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* ==========================================================================
+   Layout Containers & Rhythm
+   ========================================================================== */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  width: 100%;
+}
+
+.section-padding {
+  padding: var(--space-3xl) 0;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* 1440px+: Wide Displays */
+@media (min-width: 1440px) {
+  .container.wide {
+    max-width: var(--container-wide);
+    padding: 0 var(--space-xl);
+  }
+}
+
+/* 768px and down: Tablets & Mobile */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: var(--space-2xl) 0;
+  }
+  .container {
+    padding: 0 var(--space-md);
+  }
+}
+
+/* 360px and down: Compact Mobile Phones */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 var(--space-sm);
+  }
+  .section-padding {
+    padding: var(--space-xl) 0;
+  }
+}
+
+/* ==========================================================================
+   Motion Preference
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

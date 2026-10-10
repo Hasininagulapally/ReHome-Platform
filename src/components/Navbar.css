@@ -1,0 +1,357 @@
+.rehome-navbar-wrapper {
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+.rehome-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: 16px;
+}
+
+/* Brand Logo */
+.rehome-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.rehome-brand-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--primary-light);
+  border: 1px solid var(--primary-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rehome-brand-logo.small {
+  width: 32px;
+  height: 32px;
+}
+
+.rehome-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--secondary);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.brand-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Location Selector Pill */
+.rehome-location-pill {
+  flex-shrink: 0;
+}
+
+.location-trigger-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.location-trigger-btn:hover {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+  color: var(--text-main);
+}
+
+.location-icon {
+  color: var(--primary);
+  font-size: 14px;
+}
+
+.chevron-icon {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.location-name {
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.location-dropdown-item {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  padding: 4px 0;
+}
+
+/* Desktop Nav Links */
+.rehome-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0 auto 0 24px;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.15s ease;
+  padding: 6px 0;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+}
+
+.nav-link.active {
+  color: var(--primary);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* Nav Actions */
+.rehome-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.auth-links-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.login-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s ease;
+}
+
+.login-link:hover {
+  color: var(--text-main);
+  background: var(--bg-subtle);
+}
+
+.register-link {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s ease;
+}
+
+.register-link:hover {
+  background: var(--primary-light);
+}
+
+.post-item-btn {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  font-weight: 600 !important;
+  height: 40px !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: 0 2px 4px rgba(5, 150, 105, 0.2) !important;
+}
+
+.post-item-btn:hover {
+  background-color: var(--primary-hover) !important;
+  border-color: var(--primary-hover) !important;
+}
+
+.nav-user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-pill);
+  transition: background 0.15s;
+}
+
+.nav-user-profile:hover {
+  background: var(--bg-subtle);
+}
+
+.nav-user-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mobile-menu-trigger {
+  display: none;
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  color: var(--text-main);
+}
+
+/* Mobile Drawer */
+.mobile-drawer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobile-location-box {
+  background: var(--bg-subtle);
+  padding: 12px;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-loc-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mobile-loc-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.mobile-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-nav-item {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-main);
+  transition: background 0.15s;
+}
+
+.mobile-nav-item:hover, .mobile-nav-item.active {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.mobile-auth-section {
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.mobile-user-card {
+  background: var(--bg-subtle);
+  padding: 14px;
+  border-radius: var(--radius-md);
+}
+
+.mobile-user-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .rehome-nav-links {
+    display: none;
+  }
+  .rehome-location-pill {
+    display: none;
+  }
+  .mobile-menu-trigger {
+    display: flex;
+  }
+  .auth-links-group {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .rehome-navbar {
+    height: 60px;
+    gap: 8px;
+  }
+  .rehome-brand-logo {
+    width: 34px;
+    height: 34px;
+  }
+  .brand-name {
+    font-size: 17px;
+  }
+  .brand-tag {
+    display: none;
+  }
+  .post-item-btn {
+    padding: 0 8px !important;
+    font-size: 12px !important;
+  }
+}
+
+.nav-link:focus-visible,
+.login-link:focus-visible,
+.register-link:focus-visible,
+.mobile-menu-trigger:focus-visible,
+.post-item-btn:focus-visible,
+.nav-user-profile:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+

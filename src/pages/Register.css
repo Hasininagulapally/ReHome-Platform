@@ -1,0 +1,36 @@
+/* Register Page Styles */
+
+.auth-card-container.register-card {
+  max-width: 480px;
+}
+
+.register-trust-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--bg-subtle);
+  border: 1px solid var(--border-color);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.trust-icon {
+  color: var(--primary);
+  font-size: 15px;
+}
+
+.guidelines-checkbox {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.guidelines-checkbox a {
+  color: var(--primary);
+  font-weight: 600;
+}

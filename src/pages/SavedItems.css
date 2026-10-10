@@ -1,0 +1,12 @@
+.saved-items-page {
+  min-height: 60vh;
+  padding: 32px 0 60px;
+}
+
+@media (max-width: 360px) {
+  .saved-items-page .container > div:first-child {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 12px;
+  }
+}

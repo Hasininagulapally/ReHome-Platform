@@ -1,0 +1,140 @@
+.rehome-post-modal .ant-modal-content {
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.post-modal-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 12px;
+}
+
+.modal-title-main {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--secondary);
+}
+
+.modal-title-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.post-item-form {
+  margin-top: 12px;
+}
+
+.form-two-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.pricing-selector-section {
+  background: var(--bg-subtle);
+  padding: 14px;
+  border-radius: var(--radius-md);
+  margin-bottom: 18px;
+  border: 1px solid var(--border-color);
+}
+
+.section-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.price-radio-group {
+  display: flex;
+  width: 100%;
+}
+
+.price-radio-btn {
+  flex: 1;
+  text-align: center;
+  font-weight: 600;
+}
+
+.photo-picker-section {
+  margin-bottom: 18px;
+}
+
+.sample-photos-row {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.photo-preset-card {
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: white;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.15s ease;
+}
+
+.photo-preset-card img {
+  width: 100%;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.photo-preset-card span {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  text-align: center;
+}
+
+.photo-preset-card:hover {
+  border-color: #94a3b8;
+}
+
+.photo-preset-card.active {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.photo-preset-card.active span {
+  color: var(--primary);
+}
+
+.post-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+}
+
+.post-submit-btn {
+  background-color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 600px) {
+  .form-two-cols {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .sample-photos-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
